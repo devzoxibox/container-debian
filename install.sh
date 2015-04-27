@@ -2,7 +2,7 @@
 
 # Mises à jour
 apt-get update && apt-get -qy dist-upgrade 
-apt-get -q update && apt-get -qy install wget locales curl
+apt-get -q update && apt-get -qy install wget locales curl supervisor
 apt-get clean
 
 # Locales
