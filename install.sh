@@ -7,7 +7,11 @@ apt-get clean
 
 # Key for mariadb
 apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
-add-apt-repository 'deb http://mirror6.layerjet.com/mariadb/repo/5.5/debian wheezy main'
+echo "# MariaDB 5.5 repository list - created 2015-05-02 19:33 UTC
+# http://mariadb.org/mariadb/repositories/
+deb http://mirror6.layerjet.com/mariadb/repo/5.5/debian wheezy main
+deb-src http://mirror6.layerjet.com/mariadb/repo/5.5/debian wheezy main
+" >> /etc/apt/sources.list
 
 # Locales
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
