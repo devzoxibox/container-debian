@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Key for mariadb
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
+add-apt-repository 'deb http://mirror6.layerjet.com/mariadb/repo/5.5/debian wheezy main'
+
 # Mises à jour
 apt-get update && apt-get -qy dist-upgrade 
 apt-get -q update && apt-get -qy install wget locales curl supervisor
